@@ -1,0 +1,23 @@
+
+<% layout("/layouts/boilerplate") -%>
+
+<body>
+    <h3>Listing Details</h3>
+   <ul>
+        <li><%= show.title %></li>
+        <li><%= show.description %></li>
+        <li>&#8377;<%= show.price.toLocaleString("en-IN") %></li>
+        <li><%= show.location %></li>
+        <li><%= show.country %></li>
+    </ul>
+    <br>
+
+    <a href="/listing/<%= show._id%>/edit">Edit This Listing</a>
+
+    <br><br>
+
+    <form action="/listing/<%= show._id %>?_method=Delete" method="post"> 
+        <button>Delete This Listing</button>
+    </form>
+
+</body>
