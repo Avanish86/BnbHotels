@@ -44,6 +44,7 @@ app.get("/listing/new",(req,res)=>{
 app.post("/listing",async(req,res)=>{
     const newlisting = new listing(req.body);
     await newlisting.save();
+
     res.redirect("/listing");
 })
 
